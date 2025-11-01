@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ChatbotAi — Dev Chat (Dark Minimal)</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="title">ChatbotAi • Dev Chat</div>
+      <div class="controls">
+        <button id="theme-toggle" title="Toggle theme">🌙</button>
+        <button id="clear-chats" title="Clear chats">🧹</button>
+      </div>
+    </header>
+
+    <section id="chat" class="chat" aria-live="polite"></section>
+
+    <div class="composer">
+      <div class="left-controls">
+        <button id="mic-toggle" title="Voice input">🎤</button>
+        <button id="tts-toggle" title="Speech output">🔊</button>
+      </div>
+
+      <form id="prompt-form" class="prompt-form">
+        <textarea id="prompt" placeholder="Type a message or paste code / markdown..." rows="1"></textarea>
+        <input id="file-input" type="file" style="display:none" />
+        <button type="button" id="attach-btn" title="Attach file">📎</button>
+        <button type="submit" id="send-btn">Send →</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <span id="status">Idle</span>
+      <span id="tokens"></span>
+      <span class="hint">Dark minimal developer UI — Markdown & code-friendly</span>
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
