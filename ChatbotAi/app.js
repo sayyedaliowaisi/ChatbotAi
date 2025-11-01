@@ -1,6 +1,6 @@
 // app.js (frontend)
 // By default the frontend talks to the backend proxy at /api/chat
-const BACKEND_URL = window.__BACKEND_URL__ || location.origin + "/api/chat"; // will be replaced if needed
+const BACKEND_URL = "https://chatbotai-d2ld.onrender.com"; // will be replaced if needed
 
 const chatEl = document.getElementById("chat");
 const form = document.getElementById("prompt-form");
